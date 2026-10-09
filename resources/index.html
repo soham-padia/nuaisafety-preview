@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Resources | NU AI Safety</title><meta name="description" content="Why AI safety matters, and what NU AI Safety is for."><link rel="canonical" href="https://soham-padia.github.io/nuaisafety-preview/resources"><link rel="icon" href="/nuaisafety-preview/favicon.svg" type="image/svg+xml"><meta property="og:type" content="website"><meta property="og:site_name" content="NU AI Safety"><meta property="og:title" content="Resources | NU AI Safety"><meta property="og:description" content="Why AI safety matters, and what NU AI Safety is for."><meta property="og:url" content="https://soham-padia.github.io/nuaisafety-preview/resources"><meta property="og:image" content="https://soham-padia.github.io/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="NU AI Safety. AI safety and interpretability at Northeastern."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://soham-padia.github.io/og.png"><link rel="stylesheet" href="/nuaisafety-preview/_astro/index.CbZbngyi.css"></head> <body> <a class="skip" href="#main">Skip to content</a> <header class="masthead"> <div class="wrap"> <a class="wordmark" href="/nuaisafety-preview/">NU AI Safety</a> <nav class="nav" aria-label="Primary"> <a href="/nuaisafety-preview/join"> Join </a><a href="/nuaisafety-preview/team"> Team </a><a href="/nuaisafety-preview/resources"> Resources </a> </nav> </div> </header> <main id="main">  <section class="band"> <div class="wrap prose"> <h1>Resources</h1> <p>
+AI systems are becoming more capable and dangerous at a rate faster than we can control
+        them. Models are now able to
+<a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/">hack into other companies</a>,
+<a href="https://www.anthropic.com/research/agentic-misalignment">blackmail users</a>,
+<a href="https://arxiv.org/abs/2505.23836">know when they’re being evaluated</a>, and
+        even be
+<a href="https://www.anthropic.com/news/disrupting-AI-espionage">used en masse for cyber espionage</a>.
+</p> <p>
+We want to give Northeastern students the tools and knowledge they need to help align and
+        govern AI systems.
+</p> <p>
+Below are some of the groups and individuals working on AI safety here at Northeastern.
+</p> <div class="tabs" data-tabs> <section class="tabs__panel" id="landscape-professors" aria-labelledby="landscape-professors-heading" data-tabs-panel> <h3 class="tabs__heading" id="landscape-professors-heading" data-tabs-heading>Professors</h3> <ul> <li> <a href="https://baulab.info/">David Bau</a> studies the structure and
+              interpretation of deep networks, and leads the
+<a href="https://ndif.us/">National Deep Inference Fabric</a>. He has agreed to
+              advise this group and to give guest talks from his lab. His lab also hosts
+<a href="https://talks.baulab.info/">open talks every Friday</a>.
+</li> <li> <a href="https://wyshi.github.io/">Weiyan Shi</a> lists AI safety among her research
+              interests, and holds two Open Philanthropy grants on emergent misalignment and on
+              evaluating agent safety.
+</li> <li> <a href="https://www.khoury.northeastern.edu/home/alina/">Alina Oprea</a> works on
+              adversarial machine learning and trustworthy AI, and on security architectures for
+              language model agents.
+</li> <li> <a href="https://www.khoury.northeastern.edu/people/malihe-alikhani/">Malihe Alikhani</a>
+works on AI ethics and is a visiting fellow at the Brookings Institution.
+</li> <li> <a href="https://sinafazelpour.com/">Sina Fazelpour</a>, appointed jointly in Khoury
+              and in philosophy, works on the epistemology, ethics and governance of knowledge
+              practices in AI-mediated societies, including recent papers on disagreement in AI
+              design, evaluation and alignment.
+</li> </ul> </section> <section class="tabs__panel" id="landscape-organizations" aria-labelledby="landscape-organizations-heading" data-tabs-panel> <h3 class="tabs__heading" id="landscape-organizations-heading" data-tabs-heading>Organizations</h3> <ul> <li> <a href="https://ndif.us/">NDIF</a>, described above, calls itself a nationwide
+              research computing fabric for transparent and reproducible experiments on the
+              largest open AI systems. It is Professor Bau’s NSF-funded project, not something
+              this group runs.
+</li> <li>
+Northeastern is one of four universities in
+<a href="https://cssh.northeastern.edu/research/projects/center-for-responsible-ai-and-governance/">CRAIG</a>,
+              an NSF center on responsible AI and governance.
+</li> <li>
+The <a href="https://ai.northeastern.edu/">Institute for Experiential AI</a> names
+              responsible AI as one of its four research areas and runs a
+<a href="https://ai.northeastern.edu/responsible-ai-practice">Responsible AI Practice</a>.
+</li> <li>
+The <a href="https://cssh.northeastern.edu/ethics/">Ethics Institute</a> lists AI,
+              information and data ethics as a primary research area.
+</li> </ul> </section> </div> <script>
+        /* Progressive enhancement. The two panels are server-rendered visible, each under
+           its own heading, so with no JavaScript this section reads as two ordinary
+           labelled regions with every entry present. This upgrades them to a real tablist:
+           roles, aria-selected, aria-controls, roving tabindex, Left/Right/Home/End.
+           It runs inline, immediately after the markup it owns, so the panel that is not
+           selected is hidden before first paint rather than flashing. */
+        (function () {
+          var root = document.querySelector('[data-tabs]');
+          if (!root) return;
+          var panels = Array.prototype.slice.call(root.querySelectorAll('[data-tabs-panel]'));
+          if (panels.length < 2) return;
+
+          var list = document.createElement('div');
+          list.className = 'tabs__list';
+          list.setAttribute('role', 'tablist');
+          list.setAttribute('aria-label', 'AI safety work at Northeastern');
+
+          var tabs = panels.map(function (panel) {
+            var heading = panel.querySelector('[data-tabs-heading]');
+            var tab = document.createElement('button');
+            tab.type = 'button';
+            tab.className = 'tabs__tab';
+            tab.id = panel.id + '-tab';
+            tab.setAttribute('role', 'tab');
+            tab.setAttribute('aria-controls', panel.id);
+            tab.textContent = heading.textContent.trim();
+            list.appendChild(tab);
+
+            panel.setAttribute('role', 'tabpanel');
+            /* The tab now names the panel, so the visible heading would be read twice. */
+            panel.setAttribute('aria-labelledby', tab.id);
+            heading.hidden = true;
+            return tab;
+          });
+
+          function select(i, moveFocus) {
+            tabs.forEach(function (tab, j) {
+              var on = i === j;
+              tab.setAttribute('aria-selected', on ? 'true' : 'false');
+              tab.tabIndex = on ? 0 : -1;
+              panels[j].hidden = !on;
+            });
+            if (moveFocus) tabs[i].focus();
+          }
+
+          list.addEventListener('click', function (e) {
+            var i = tabs.indexOf(e.target.closest('[role="tab"]'));
+            if (i > -1) select(i, false);
+          });
+
+          list.addEventListener('keydown', function (e) {
+            var i = tabs.indexOf(document.activeElement);
+            if (i < 0) return;
+            var next = null;
+            if (e.key === 'ArrowRight') next = (i + 1) % tabs.length;
+            else if (e.key === 'ArrowLeft') next = (i - 1 + tabs.length) % tabs.length;
+            else if (e.key === 'Home') next = 0;
+            else if (e.key === 'End') next = tabs.length - 1;
+            if (next === null) return;
+            e.preventDefault();
+            select(next, true);
+          });
+
+          root.insertBefore(list, root.firstChild);
+          root.classList.add('tabs--js');
+          select(0, false);
+        })();
+      </script> <p>
+None of these people or groups are involved with this group and we are not claiming
+        them. They are here because a student deciding where to spend four years should know
+        the work is going on around them.
+</p> </div> </section>  </main> <footer class="foot"> <div class="wrap"> <div class="foot__row"> <div> <p class="foot__name">Northeastern's Student Led AI Safety Group</p> <nav class="foot__nav" aria-label="Footer"> <a href="/nuaisafety-preview/join">Join</a><a href="/nuaisafety-preview/team">Team</a><a href="/nuaisafety-preview/resources">Resources</a> </nav> </div> <div class="foot__contact">  <p> <span class="foot__label">Follow</span> <a href="https://www.linkedin.com/company/nu-ai-safety/">LinkedIn</a> </p> </div> </div> <p class="credit"> <a href="https://github.com/soham-padia/nuaisafety">Source on GitHub</a> </p> </div> </footer> <script type="module" src="/nuaisafety-preview/_astro/Base.astro_astro_type_script_index_0_lang.DZBASine.js"></script> </body> </html>
